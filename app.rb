@@ -51,6 +51,7 @@ post '/jira_to_intercom' do
       conversation = INTERCOM_CLIENT.get_conversation(link_finder.conversation_id)
 
       puts "Conversation status code: #{conversation.code}"
+      puts "Conversation body: #{conversation.body}"
 
       # check if convo already linked
       if conversation.code == 200
